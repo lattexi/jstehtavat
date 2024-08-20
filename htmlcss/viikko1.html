@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8">
+    <style>
+        /*////////////////////
+        // Positioning items    
+        //////////////////////
+        
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+    
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+        
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+    
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+        
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+        
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+          
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+        
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {}
+
+        .box {
+            height: 100px;
+            width: 20%;
+            padding: 10px 10px 10px 10px;
+            border: 1px solid black;
+            color: aliceblue;
+            display: block;
+            float: left;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        #orange {
+            background-color: orange;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* img */
+        img {}
+
+        /* container */
+        .container {}
+
+        /* relative and absolute positioning with blue */
+        #blue {}
+
+        #important {
+            color: black;
+        }
+
+        .info {
+            color: red;
+        }
+
+        p {
+            color: blue;
+        }
+
+        p {
+            color: green;
+        }
+
+        main {
+            background-color: rgb(176, 176, 176);
+            margin: 20px;
+            width: 90%;
+            max-width: 800px;
+            min-width: 400px;
+            margin: auto;
+        }
+
+        #lause {
+            color: black;
+            font-size: xx-large;
+        }
+
+        nav::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="box" id="red">Box 1</div>
+        <div class="box" id="green">Box 2</div>
+        <div class="box" id="blue">Box 3</div>
+        <div class="box" id="yellow">Box 4</div>
+        <div class="box" id="orange">Box 5</div>
+    </nav>
+
+    <main>
+        <h1>Heading 1</h1>
+        <h1>Heading 2</h1>
+        <h2>Toisen tason otsikko</h2>
+
+        <p class="info">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto consectetur assumenda minus culpa!
+            Ipsam similique libero saepe earum qui dolor eos, cupiditate quis neque est eius eum sunt temporibus
+            suscipit!
+        </p>
+
+        <p class="info" id="important">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi alias eligendi reprehenderit minus sed
+            doloremque consectetur ipsum? Rerum ducimus possimus nostrum fugit omnis accusamus, nemo, facilis quisquam,
+            veniam blanditiis hic? Molestias itaque eligendi non deleniti nam, repellendus eum laborum deserunt
+            inventore harum quod architecto
+            <span id="lause">asperiores numquam corporis rerum dolorum commodi assumenda possimus corrupti soluta error
+                quos fuga
+                reprehenderit. Tempora, eveniet.</span>
+        </p>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, necessitatibus quis possimus repellat rerum,
+            cum suscipit temporibus assumenda nesciunt dolores distinctio iste et earum veniam doloribus quidem. Saepe,
+            vel
+            earum. Quisquam soluta dolorum id obcaecati quo quod voluptatibus nisi officiis pariatur architecto saepe
+            eligendi
+            odit velit iure facere nobis perferendis quibusdam officia distinctio rem magnam, fugit quam eum ipsa?
+            Pariatur!
+            Dolores iusto exercitationem ratione accusantium placeat quos aliquid pariatur doloribus aut in totam sint
+            iste, temporibus doloremque nobis voluptates. Quasi commodi ipsum est dolor vitae vel illum doloribus sed
+            itaque.
+        </p>
+
+
+        <!-- Responsive images and centering -->
+
+    </main>
+</body>
+
+</html>
