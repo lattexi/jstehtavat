@@ -25,27 +25,42 @@ nav a {
 nav a:hover {
     background-color: #ddd;
     color: black;
+    border-radius: 10px;
 }
 
-
-
+#kasvu {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    background-color: darkgrey;
+    border-radius: 0;
+}
 
 
 .about {
     width: 90%;
     min-width: 500px;
     max-width: 1000px;
-    margin: auto;
-    margin-top: 300px;
-    margin-bottom: 20px;
+    margin: 300px auto 20px;
     background-color: rgb(154, 154, 154);
     padding: 20px;
+    position: relative;
+    border-radius: 10px;
 }
 
 #ravintola {
     float: left;
     margin-right: 20px;
     width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#kana {
+    position: absolute;
+    top: -50px;
+    right: 20px;
+    z-index: 10;
+    width: 100px;
     height: auto;
 }
 
