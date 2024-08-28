@@ -9,16 +9,28 @@
 </head>
 
 <body>
+    <div class="tausta"></div>
     <nav>
-        <div id="kasvu">Kasvu></div>
-        <a href="#home">Etusivu</a>
-        <a href="#news">Ruokalista</a>
-        <a href="#contact">Ota yhteyttä</a>
-        <a href="#about">Tietoa meistä</a>
+        <h1 id="kasvu">Kasvu</h1>
+        <ul>
+            <li><a href="#home">Etusivu</a></li>
+            <li><a href="#news">Ruokalista</a></li>
+            <li><a href="#contact">Ota yhteyttä</a></li>
+            <li><a href="#about">Tietoa meistä</a></li>
+        </ul>
     </nav>
 
-    <div>
-        <div class="about">
+    <dialog open>
+        <h1>Kirjaudu sisään</h1>
+        <p>Sukunimi</p>
+
+        <form method="dialog">
+            <button>Kirjaudu</button>
+        </form>
+    </dialog>
+
+    <main>
+        <section class="about">
             <img id="ravintola" src="Ravintola.webp" alt="Kuva">
             <h1>Tietoa meistä</h1>
             <h2>Meidän tarinamme</h2>
@@ -29,6 +41,6 @@
                 voluptatibus.
             </p>
             <img id="kana" src="kana.png" alt="Kuva">
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
