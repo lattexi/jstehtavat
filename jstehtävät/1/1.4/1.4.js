@@ -1,6 +1,6 @@
-let score = parseInt(prompt("Enter your course assessment score (0-100):"))
+let score = parseInt(prompt("Enter your course assessment score (0-100):"));
 
-let grade
+let grade;
 
 if (score >= 0 && score <= 39) {
     grade = 0;
@@ -15,7 +15,7 @@ if (score >= 0 && score <= 39) {
 } else if (score >= 88 && score <= 100) {
     grade = 5;
 } else {
-    grade = "Invalid score"
+    grade = "Invalid score";
 }
 
-document.getElementById("target").innerHTML = `Your grade is: ${grade}`
+document.getElementById("target").innerHTML = `Your grade is: ${grade}`;
