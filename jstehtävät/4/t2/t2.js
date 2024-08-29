@@ -771,8 +771,11 @@ const restaurants = [
 ];
 
 // your code here
+
 const kohde = document.querySelector('tbody');
 const modaali = document.querySelector('dialog');
+
+restaurants.sort((a, b) => a.name - b.name);
 
 for (const restaurant of restaurants) {
   if (restaurant) {
@@ -782,7 +785,9 @@ for (const restaurant of restaurants) {
     const osoite = document.createElement('td');
     osoite.innerText = restaurant.address;
 
-    kohde.append(nimi, osoite);
+    const rivi = document.createElement('tr');
 
+    rivi.append(nimi, osoite);
+    kohde.append(rivi);
   }
 }
