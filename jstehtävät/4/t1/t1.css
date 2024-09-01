@@ -38,7 +38,7 @@ li input {
   cursor: pointer;
 }
 
-li input[type='checkbox']:checked + label {
+li input[type='checkbox']:checked+label {
   background-color: rgb(146, 208, 136);
   font-weight: bold;
 }
