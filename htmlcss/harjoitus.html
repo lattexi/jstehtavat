@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: beige;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        main {
+            max-width: 700px;
+            margin: auto;
+            background-color: rgb(236, 236, 236);
+            padding: 20px;
+        }
+
+
+
+        .clear {
+            clear: both;
+        }
+
+        /* img */
+        img {}
+
+        /* container */
+        .container {
+            background-color: rgb(236, 236, 236);
+            height: 60vh;
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            color: aliceblue;
+            background-color: blanchedalmond;
+        }
+
+        #vasen {
+            background-color: rgb(96, 160, 255);
+            flex: 2;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .lista {
+            /* background-color: rgb(255, 96, 96); */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        #oikea {
+            background-color: rgb(203, 184, 138);
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .yla {
+            /* background-color: rgb(147, 222, 135); */
+            height: 200px;
+            /* flex-basis: 200px; */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg');
+        }
+
+        .ala {
+            /* background-color: cadetblue; */
+            flex: 1;
+        }
+
+        h3 {
+            color: black;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(147, 222, 135);
+            height: 100px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 5px;
+        }
+
+        nav a {
+            padding: 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: rgb(255, 96, 96);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header button {
+            padding: 20px;
+            background-color: rgb(255, 96, 96);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .texti {
+            color: black;
+        }
+
+        .leikkaa {
+            width: 200px;
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<main>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="">LOGO</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Cats</a></li>
+                </ul>
+            </nav>
+            <button>Login</button>
+        </header>
+        <div class="container">
+            <div class="box" id="vasen">
+                <div class="lista">
+                    <h3>Otsikko</h3>
+                    <ul>
+                        <li>Cat post 1</li>
+                        <li>Cat post 2</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box" id="oikea">
+                <div class="yla">
+                    <h3>Media Sharing App</h3>
+                </div>
+                <div class="ala"></div>
+            </div>
+        </div>
+        </div>
+
+        <footer>
+            <p>Flexbox Layout Example</p>
+        </footer>
+</main>
+
+</body>
+
+
+</html>
