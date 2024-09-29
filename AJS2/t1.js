@@ -14,8 +14,13 @@ closeModal.addEventListener('click', () => {
 const apiURL = 'https://media1.edu.metropolia.fi/restaurant';
 
 const haeRavintolat = async () => {
-  const restaurants = await fetchData(apiURL + '/api/v1/restaurants');
-  return restaurants;
+  try {
+    const restaurants = await fetchData(apiURL + '/api/v1/restaurants');
+    return restaurants;
+  } catch (error) {
+    kohde.textContent = 'Virhe haettaessa ravintoloita';
+    console.error('Virhe haettaessa ravintoloita', error);
+  }
 };
 
 const teeRavintolaLista = async (restaurants) => {
@@ -33,8 +38,7 @@ const teeRavintolaLista = async (restaurants) => {
 
   restaurants.sort((a, b) => a.name.localeCompare(b.name));
 
-  for (let i = 0; i < restaurants.length; i++) {
-    const restaurant = restaurants[i];
+  restaurants.forEach((restaurant) => {
     if (restaurant) {
       const { _id } = restaurant;
 
@@ -48,11 +52,15 @@ const teeRavintolaLista = async (restaurants) => {
         });
 
         rivi.classList.add('highlight');
-
         // hae päivän ruokalista
-        const paivanLista = await fetchData(
-          apiURL + `/api/v1/restaurants/daily/${_id}/fi`
-        );
+        try {
+          const paivanLista = await fetchData(
+            apiURL + `/api/v1/restaurants/daily/${_id}/fi`
+          );
+        } catch (error) {
+          info.textContent = 'Virhe haettaessa päivän ruokalistaa';
+          console.error('Virhe haettaessa päivän ruokalistaa', error);
+        }
 
         console.log('päivan lista', paivanLista.courses);
         // tulosta päivän ruokalista
@@ -65,7 +73,7 @@ const teeRavintolaLista = async (restaurants) => {
 
       kohde.append(rivi);
     }
-  };
+  });
 };
 
 const raflat = await haeRavintolat();
