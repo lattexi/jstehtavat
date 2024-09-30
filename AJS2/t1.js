@@ -62,6 +62,10 @@ const teeRavintolaLista = async (restaurants) => {
           console.error('Virhe haettaessa päivän ruokalistaa', error);
         }
 
+        const paivanLista = await fetchData(
+          apiURL + `/api/v1/restaurants/daily/${_id}/fi`
+        );
+
         console.log('päivan lista', paivanLista.courses);
         // tulosta päivän ruokalista
         const ravintolaHTML = restaurantModal(restaurant, paivanLista.courses);
